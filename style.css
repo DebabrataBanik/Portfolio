@@ -1,35 +1,244 @@
 :root{
-  --ff-logo: "Funnel Display", serif;
+  --ff-primary: "Exo 2", serif;
 }
 
 *{
   margin: 0;
   padding: 0;
+  font-family: var(--ff-primary);
+  font-weight: 300;
   box-sizing: border-box;
+  color: #000;
 }
 
-.wrapper{
-  display: flex;
 
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #1f1f1f;
+html,body{
+  /* min-height: 100vh; */
 }
 
-.header{
-  padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .logo{
-  font-family: var(--ff-logo);
+  font-family: "Funnel Display", serif;
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
+  color: #000;
 }
 
 .nav-list{
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.top-left{
+  align-items: flex-start;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  cursor: pointer; 
+}
+
+.social-links{
+  position: fixed;
+  top: 50%;
+  left: 1rem; 
+  transform: translateY(-50%);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7rem;
+  font-size: 1rem;
+  z-index: -1;
+  cursor: pointer;
+
+  & li a{
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+}
+
+
+
+.pre-loader{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.loader{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-content{
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #000;
+  display: flex;
+  align-items: baseline;
+}
+
+.content{
+  font-size: 1.5rem;
+  font-family: 'PP Editorial Old', sans-serif;
+  margin-right: 0.5rem;
+}
+
+
+.text{
+  overflow: hidden;
+}
+
+.text .letter{
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.counter{ 
+  text-align: right;
+  line-height: 1;
+}
+
+.loader-bg{
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #eeeeee;
+  z-index: -1;
+}
+
+.site-content{
+  background-color: #fff;
+  position: relative;
+  z-index: -2;
+  height: 100vh;
+
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero{
+  padding-top: 17rem;
+  padding-inline: 5rem;
+  max-width: 1000px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero h1{
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  line-height: 1;
+  position: relative;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.hero h1 span{
+  display: block;
+  margin-block: 1rem;
+  font-size: 5rem;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.hero p{
+  font-size: 1rem;
+  text-align: left;
+  max-width: 50ch;
+}
+
+.sub-content{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.cta{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.btn{
+  position: relative;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-family: "Poppins", serif;
+  width: 130px;
+  padding-block: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  & span{
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.btn:hover span{
+  transform: translateX(-10px);
+}
+
+.btn::after{
+  position: absolute;
+  content: "->";
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover::after{
+  opacity: 1;
+}
+
+
+footer{
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+}
+
+.footer-content{
+  text-align: center;
+}
+
+.projects{
+  border: 1px solid red;
+  padding-inline: 10rem;
+  background-color: #fff;
 }

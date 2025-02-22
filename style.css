@@ -11,11 +11,7 @@
   color: #000;
 }
 
-
-html,body{
-  /* min-height: 100vh; */
-}
-
+/* landing page section */
 
 .logo{
   font-family: "Funnel Display", serif;
@@ -33,8 +29,11 @@ html,body{
 }
 
 .top-left{
+  flex-direction: row;
   align-items: flex-start;
+  gap: 2rem;
 }
+
 
 a{
   text-decoration: none;
@@ -62,7 +61,12 @@ a{
   }
 }
 
+/* pre loader */
 
+body.preloading{
+  overflow: hidden;
+  height: 100vh;
+}
 
 .pre-loader{
   position: fixed;
@@ -145,7 +149,7 @@ a{
 
 .hero{
   padding-top: 17rem;
-  padding-inline: 5rem;
+  padding-inline: 8rem;
   max-width: 1000px;
   margin-inline: auto;
   text-align: center;
@@ -163,7 +167,7 @@ a{
 .hero h1 span{
   display: block;
   margin-block: 1rem;
-  font-size: 5rem;
+  font-size: 6.5rem;
   font-family: "Poppins", serif;
   font-weight: 500;
   letter-spacing: -2px;
@@ -172,14 +176,14 @@ a{
 .hero p{
   font-size: 1rem;
   text-align: left;
-  max-width: 50ch;
+  max-width: 30rem;
 }
 
 .sub-content{
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .cta{
@@ -237,8 +241,80 @@ footer{
   text-align: center;
 }
 
+section{
+  opacity: 0;
+}
+
 .projects{
-  border: 1px solid red;
+  margin-top: 5rem;
   padding-inline: 10rem;
-  background-color: #fff;
+}
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.project__title{
+  font-size: 5rem;
+}
+
+.subtext{
+  width: 25rem;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.projects__container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10rem;
+  margin-bottom: 5rem;
+}
+
+.preview__img{
+  height: 20rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tech-stack{
+  margin-top: .5rem;
+  font-size: 0.8rem;
+}
+
+.title{
+  position: relative;
+  width: fit-content;
+  font-size: 2rem;
+  cursor: pointer;
+
+  & span{
+    display: inline-block;
+    transition: transform 0.5s;
+  }
+}
+
+.title:hover span{
+  transform: translateX(40px);
+}
+
+.title::before{
+  position: absolute;
+  content: '\2192';
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.title:hover::before{
+  opacity: 1;
 }

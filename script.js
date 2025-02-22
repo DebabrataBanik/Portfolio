@@ -1,8 +1,11 @@
-function loader(){
+import { items } from './data.js';
+
+function loader() {
   let counter = document.querySelector('.counter p');
   let curCount = 0;
 
-  function updateCounter(){
+
+  function updateCounter() {
     let inc = Math.floor(Math.random() * 10) + 1;
     curCount = Math.min(curCount + inc, 100);
     counter.textContent = curCount;
@@ -15,7 +18,7 @@ function loader(){
 
 setTimeout(loader, 1000);
 
-gsap.to(".counter", 
+gsap.to(".counter",
   {
     opacity: 0,
     delay: 3.5,
@@ -60,7 +63,7 @@ gsap.to(".loader", {
   delay: 3.5
 })
 
-gsap.to(".loader-bg",{
+gsap.to(".loader-bg", {
   height: "0",
   ease: "power4.inOut",
   duration: 1,
@@ -68,6 +71,7 @@ gsap.to(".loader-bg",{
   onComplete: () => {
     document.querySelector(".site-content").style.zIndex = "1";
     document.querySelector(".social-links").style.zIndex = "2";
+    document.querySelector('.container').style.zIndex = "-10";
   }
 })
 
@@ -83,49 +87,28 @@ gsap.from(".hero h1", {
 
 gsap.to(".footer-content", {
   opacity: 0,
-  y: 50, 
+  y: 50,
   duration: 0.5,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".hero", 
-    start: "top top",  
-    end: "bottom top", 
-    scrub: true,      
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
   }
 });
 
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.body.classList.remove("preloading"); 
+    document.querySelector(".pre-loader").style.display = "none";
+  }, 5000);
+});
 
-gsap.registerPlugin(ScrollTrigger);
-
-ScrollTrigger.create({
-  trigger: ".projects",
-  start: "top center",
-  onEnter: () => {
-
-    gsap.to(".nav-list", {
-      ease: "power2.out",
-      onComplete: () => {
-
-        document.querySelector(".nav-list").classList.add("top-left");
-      }
-    });
-    gsap.to(".logo", {
-      opacity: 0,
-      duration: 0.5,
-      onComplete: () => {
-        document.querySelector(".logo").style.display = "none";
-      }
-    });
-  },
-  onLeaveBack: () => {
-
-    document.querySelector(".nav-list").classList.remove("top-left");
-
-    gsap.to(".nav-list", {
-      ease: "power2.out"
-    });
-
-    document.querySelector(".logo").style.display = "block";
-    gsap.to(".logo", { opacity: 1, duration: 0.5 });
-  }
+gsap.to("section", {
+  opacity: 1,
+  zIndex: 1,
+  delay: 4.5,
+  duration: 0.5,
+  stagger: 0.2
 });

@@ -98,6 +98,19 @@ gsap.to(".footer-content", {
   }
 });
 
+gsap.to(".social-links", {
+  opacity: 0,
+  y: 50,
+  duration: 0.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+  }
+});
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.body.classList.remove("preloading"); 
@@ -112,3 +125,7 @@ gsap.to("section", {
   duration: 0.5,
   stagger: 0.2
 });
+
+document.querySelector('.email').addEventListener('click', e => {
+  navigator.clipboard.writeText(e.target.textContent)
+})

@@ -129,3 +129,28 @@ gsap.to("section", {
 document.querySelector('.email').addEventListener('click', e => {
   navigator.clipboard.writeText(e.target.textContent)
 })
+
+const lenis = new Lenis()
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+requestAnimationFrame(raf)
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = anchor.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      lenis.scrollTo(targetElement, {
+        duration: 1.2, 
+        offset: 0, 
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      });
+    }
+  });
+});

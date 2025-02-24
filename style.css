@@ -149,7 +149,7 @@ body.preloading{
 
 .hero{
   padding-top: 17rem;
-  padding-inline: 8rem;
+  padding-inline: 5rem;
   max-width: 1000px;
   margin-inline: auto;
   text-align: center;
@@ -175,8 +175,9 @@ body.preloading{
 
 .hero p{
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   max-width: 30rem;
+  margin-left: auto;
 }
 
 .sub-content{
@@ -230,7 +231,7 @@ body.preloading{
 }
 
 
-footer{
+.landing-footer{
   position: absolute; 
   bottom: 0;
   width: 100%;
@@ -253,7 +254,7 @@ section{
 .heading{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .project__title{
@@ -269,7 +270,8 @@ section{
 .projects__container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10rem;
+  column-gap: 10rem;
+  row-gap: 5rem;
   margin-bottom: 5rem;
 }
 
@@ -295,26 +297,122 @@ img{
   width: fit-content;
   font-size: 2rem;
   cursor: pointer;
+  display: flex;
+  align-items: baseline;
 
-  & span{
+  & h3{
     display: inline-block;
     transition: transform 0.5s;
   }
 }
 
-.title:hover span{
+.title:hover h3{
   transform: translateX(40px);
 }
 
 .title::before{
   position: absolute;
-  content: '\2192';
+  content: '\2197';
   top: 0;
   left: 0;
   opacity: 0;
+  transform: scale(1.2);
   transition: opacity 0.5s;
 }
 
 .title:hover::before{
   opacity: 1;
+}
+
+.my_process{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 10rem;
+  margin-block: 12rem 8rem;
+}
+
+.section-title{
+  font-size: 5rem;
+}
+
+.process-grid{
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  margin-top: 8rem;
+}
+
+.step{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 25rem;
+}
+
+.step h3{
+  font-size: 1.6rem;
+}
+.step p{
+  font-size: 1.2rem;
+}
+
+.tech-skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rem;
+  font-size: 3rem;
+}
+
+.skillset{
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  letter-spacing: 1px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.footer h2{
+  font-size: 3rem;
+}
+
+.footer p{
+  font-size: 1.2rem;
+}
+
+.links{
+  display: flex;
+  gap: 5rem;
+
+  & i{
+    font-size: 2rem;
+  }
+}
+
+.end-line{
+  padding-inline: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.email{
+  cursor: pointer;
+
+  &:hover{
+    text-decoration: underline;
+  }
 }

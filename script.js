@@ -139,8 +139,8 @@ const lenis = new Lenis()
 
 requestAnimationFrame(raf)
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", e => {
     e.preventDefault();
     const targetId = anchor.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);

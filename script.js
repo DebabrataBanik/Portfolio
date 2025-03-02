@@ -1,5 +1,3 @@
-import { items } from './data.js';
-
 function loader() {
   let counter = document.querySelector('.counter p');
   let curCount = 0;

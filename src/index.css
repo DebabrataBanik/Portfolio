@@ -1,1 +1,28 @@
 @import "tailwindcss";
+@import "./tokens.css";
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text-primary: var(--text);
+  --color-text-secondary: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+
+  --font-sans: "Clash Display", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary;
+  }
+}

@@ -9,6 +9,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/fonts/ClashGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--bg);
   --color-surface: var(--surface);
@@ -18,11 +26,22 @@
   --color-text-muted: var(--text-muted);
   --color-accent: var(--accent);
 
-  --font-sans: "Clash Display", system-ui, -apple-system, sans-serif;
+  --font-sans: "Clash Grotesk", system-ui, -apple-system, sans-serif;
+  --font-heading: "Clash Display", system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
   body {
     @apply bg-background text-text-primary;
+  }
+}
+
+@layer components {
+  .cta {
+    @apply p-2 px-3 my-5 font-heading tracking-wide text-sm bg-surface border border-border rounded-md cursor-pointer hover:text-accent transition-colors duration-300;
+  }
+
+  .cta-links {
+    @apply p-2.5 bg-surface border border-border rounded-lg cursor-pointer text-text-primary hover:text-text-secondary transition-colors duration-300;
   }
 }

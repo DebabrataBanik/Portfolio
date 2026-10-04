@@ -6,9 +6,9 @@ const App = () => {
     <div className="pt-4 flex justify-center">
       <div className="w-200 flex flex-col items-center">
         <Header />
-        <div className="w-196 px-4 border border-border">
+        <main className="w-196 px-4 border border-border border-t-0">
           <Home />
-        </div>
+        </main>
       </div>
     </div>
   );

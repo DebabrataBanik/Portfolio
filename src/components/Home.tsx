@@ -3,7 +3,7 @@ import { SiFrontendmentor } from "react-icons/si";
 
 const Home = () => {
   return (
-    <div className="mt-10">
+    <section id="home" className="mt-10">
       <h1 className="font-heading text-4xl font-medium mb-8 relative">
         Hi, I'm Debabrata
         <span className="absolute bottom-1 opacity-85 left-0 w-80 h-1.5 bg-accent"></span>
@@ -59,7 +59,7 @@ const Home = () => {
           <SiFrontendmentor />
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

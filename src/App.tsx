@@ -1,5 +1,6 @@
 import Home from "./components/Home";
 import Header from "./components/Header";
+import About from "./components/About";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
         <Header />
         <main className="w-196 px-4 border border-border border-t-0">
           <Home />
+          <About />
         </main>
       </div>
     </div>

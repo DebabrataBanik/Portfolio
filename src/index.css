@@ -34,6 +34,11 @@
   body {
     @apply bg-background text-text-primary;
   }
+
+  section {
+    scroll-behavior: smooth;
+    scroll-margin-top: 80px;
+  }
 }
 
 @layer components {
@@ -43,5 +48,17 @@
 
   .cta-links {
     @apply p-2.5 bg-surface border border-border rounded-lg cursor-pointer text-text-primary hover:text-text-secondary transition-colors duration-300;
+  }
+
+  .skill {
+    @apply tracking-widest text-text-secondary;
+  }
+
+  .skill-tag {
+    @apply font-medium pr-2 tracking-wider;
+  }
+
+  .list-item {
+    @apply text-text-secondary tracking-wider;
   }
 }

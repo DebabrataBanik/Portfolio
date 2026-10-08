@@ -4,10 +4,10 @@ import About from "./components/About";
 
 const App = () => {
   return (
-    <div className="pt-4 flex justify-center">
-      <div className="w-200 flex flex-col items-center p-1">
+    <div className="flex justify-center">
+      <div className="flex flex-col items-center">
         <Header />
-        <main className="max-w-3xl px-4 border border-border border-t-0 mx-1">
+        <main className="max-w-3xl px-4 border border-border border-t-0 mx-4">
           <Home />
           <About />
         </main>

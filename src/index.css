@@ -31,12 +31,15 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-text-primary;
   }
 
   section {
-    scroll-behavior: smooth;
     scroll-margin-top: 80px;
   }
 }

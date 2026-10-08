@@ -44,7 +44,7 @@ const About = () => {
           Experience
         </h3>
         <div>
-          <h4 className="font-medium tracking-wide mb-2">
+          <h4 className="font-medium tracking-wide mt-5 mb-2">
             Web Developer Intern - ZYMO (Mar-Jun 2025)
           </h4>
           <ul className="list-disc pl-5 space-y-1">

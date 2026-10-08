@@ -10,16 +10,24 @@ const Header = () => {
             <nav>
               <ul className="flex items-center gap-7 text-sm  text-text-muted font-heading">
                 <li>
-                  <a href="#home">Home</a>
+                  <a className="nav-links nav-home" href="#home">
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <a href="#about">About</a>
+                  <a className="nav-links nav-about" href="#about">
+                    About
+                  </a>
                 </li>
                 <li>
-                  <a href="#projects">Projects</a>
+                  <a className="nav-links nav-projects" href="#projects">
+                    Projects
+                  </a>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a className="nav-links nav-contact" href="#contact">
+                    Contact
+                  </a>
                 </li>
               </ul>
             </nav>

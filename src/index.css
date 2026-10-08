@@ -45,6 +45,17 @@
 }
 
 @layer components {
+  .nav-links {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  body:has(#home:target) .nav-home,
+  body:has(#about:target) .nav-about,
+  body:has(#porjects:target) .nav-projects,
+  body:has(#contact:target) .nav-contact {
+    @apply after:w-full;
+  }
+
   .cta {
     @apply p-2 px-3 my-5 font-heading tracking-wide text-sm bg-surface border border-border rounded-md cursor-pointer hover:text-accent transition-colors duration-300;
   }

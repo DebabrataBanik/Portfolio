@@ -10,8 +10,8 @@
 
 :root[data-theme="dark"] {
   --bg: #1c1b19;
-  --surface: #201f1d;
-  --border: #2d2b2a;
+  --surface: #222120;
+  --border: #353231;
   --text: #ffffff;
   --text-body: #cdcbcb;
   --text-muted: #bdbbba;

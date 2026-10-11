@@ -3,7 +3,7 @@ import { SiFrontendmentor } from "react-icons/si";
 
 const Home = () => {
   return (
-    <section id="home" className="py-15 pt-30">
+    <section id="home" className="py-10 pt-30 border-b border-b-border">
       <h1 className="font-heading text-4xl font-medium mb-8 relative">
         Hi, I'm Debabrata <span className="absolute z-10 bottom-1">👋</span>
         <span className="absolute bottom-1 opacity-85 left-0 w-83 h-1.5 bg-accent"></span>
@@ -17,7 +17,7 @@ const Home = () => {
         I built this site to put my projects, skills and experience in one
         place. Thanks for stopping by!
       </p>
-      <div className="flex gap-5 font-medium">
+      <div className="flex gap-5 font-medium my-8">
         <a href="#projects" className="cta">
           View My Work
         </a>
@@ -27,10 +27,10 @@ const Home = () => {
           rel="noopener noreferrer"
           className="cta"
         >
-          Download Resume
+          My Resume
         </a>
       </div>
-      <div className="flex items-center gap-4 pb-10 border-b border-b-border">
+      <div className="flex items-center gap-4">
         <a
           className="cta-links"
           aria-label="GitHub"

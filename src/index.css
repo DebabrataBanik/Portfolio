@@ -57,7 +57,7 @@
   }
 
   .cta {
-    @apply p-2 px-3 my-5 font-heading tracking-wide text-sm bg-surface border border-border rounded-md cursor-pointer hover:text-accent transition-colors duration-300;
+    @apply relative font-heading tracking-wide text-sm cursor-pointer hover:text-accent transition-colors duration-300 before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-accent;
   }
 
   .cta-links {

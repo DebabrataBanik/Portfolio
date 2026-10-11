@@ -51,7 +51,7 @@
 
   body:has(#home:target) .nav-home,
   body:has(#about:target) .nav-about,
-  body:has(#porjects:target) .nav-projects,
+  body:has(#projects:target) .nav-projects,
   body:has(#contact:target) .nav-contact {
     @apply after:w-full;
   }
@@ -74,5 +74,9 @@
 
   .list-item {
     @apply text-text-secondary tracking-wider;
+  }
+
+  .icon-btn {
+    @apply text-text-primary transition-colors flex items-center hover:text-text-secondary duration-300;
   }
 }

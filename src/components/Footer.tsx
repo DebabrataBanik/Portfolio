@@ -4,14 +4,14 @@ import { SiFrontendmentor } from "react-icons/si";
 const Footer = () => (
   <footer className="tracking-wider flex items-center justify-between border-t border-border py-4 text-sm text-text-secondary">
     <p>© {new Date().getFullYear()} Debabrata Banik</p>
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-7">
       <a
         aria-label="GitHub"
         href="https://github.com/DebabrataBanik"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaGithub />
+        <FaGithub size={17} />
       </a>
       <a
         aria-label="LinkedIn"
@@ -19,7 +19,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedinIn />
+        <FaLinkedinIn size={17} />
       </a>
       <a
         aria-label="Frontend Mentor"
@@ -27,7 +27,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <SiFrontendmentor />
+        <SiFrontendmentor size={17} />
       </a>
     </div>
   </footer>

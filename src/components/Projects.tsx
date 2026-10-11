@@ -27,16 +27,16 @@ const Projects = () => {
           href="https://github.com/DebabrataBanik"
           target="_blank"
           rel="noopener noreferrer"
-          className="cta"
+          className="cta mr-1"
         >
           GitHub
-        </a>{" "}
-        and{" "}
+        </a>
+        and
         <a
           href="https://www.frontendmentor.io/profile/DebabrataBanik"
           target="_blank"
           rel="noopener noreferrer"
-          className="cta"
+          className="cta mx-1"
         >
           Frontend Mentor
         </a>

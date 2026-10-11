@@ -1,6 +1,8 @@
-import { SunIcon } from "lucide-react";
+import { SunIcon, MoonIcon } from "lucide-react";
+import { useTheme } from "../context/themeContext";
 
 const Header = () => {
+  const { toggleTheme, isDarkMode } = useTheme();
   return (
     <div className="fixed max-w-200 z-10 w-full pt-4 px-2 bg-background">
       <div className="w-full p-1 border border-border rounded-lg bg-surface">
@@ -31,8 +33,11 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <button className="p-2 border border-border rounded-lg bg-background cursor-pointer">
-              <SunIcon size={15} />
+            <button
+              onClick={toggleTheme}
+              className="p-2 border border-border rounded-lg bg-background cursor-pointer"
+            >
+              {isDarkMode ? <MoonIcon size={15} /> : <SunIcon size={15} />}
             </button>
           </div>
         </div>

@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-10 pb-20">
-      <h2 className="relative mb-4 font-heading text-3xl font-medium tracking-wide">
+      <h2 className="relative mb-4 font-heading text-2xl sm:text-3xl font-medium tracking-wide">
         Contact
         <span className="absolute bottom-1.5 ml-1.5 w-7 h-0.5 bg-accent"></span>
       </h2>
@@ -27,7 +27,11 @@ const Contact = () => {
         my work, an opportunity, or just a chat.
       </p>
       <div className="mt-6 flex items-center gap-2">
-        <a href={`mailto:${EMAIL}`} onClick={copy} className="cta text-xl">
+        <a
+          href={`mailto:${EMAIL}`}
+          onClick={copy}
+          className="cta text-lg sm:text-xl"
+        >
           {EMAIL}
         </a>
         {copied && <FiCheck size={18} className="text-accent" />}

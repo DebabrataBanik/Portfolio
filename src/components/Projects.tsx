@@ -21,6 +21,27 @@ const Projects = () => {
         ))}
       </div>
       <ProjectModal project={active} onClose={() => setActive(null)} />
+      <p className="mt-8 text-sm tracking-wider text-text-secondary">
+        More of my work is on{" "}
+        <a
+          href="https://github.com/DebabrataBanik"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta"
+        >
+          GitHub
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://www.frontendmentor.io/profile/DebabrataBanik"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta"
+        >
+          Frontend Mentor
+        </a>
+        .
+      </p>
     </section>
   );
 };

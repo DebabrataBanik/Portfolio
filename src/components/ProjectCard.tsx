@@ -15,14 +15,14 @@ const ProjectCard = ({ project, onDetails }: ProjectCardProps) => {
         src={project.image}
         alt={`${project.title} preview`}
         loading="lazy"
-        className="aspect-video w-full object-cover"
+        className="aspect-video w-full object-cover border border-border"
       />
 
       <div className="mt-4 pb-4 flex items-start justify-between gap-4">
         <div>
           <h3 className="font-medium tracking-wider">{project.title}</h3>
           <p className="text-xs tracking-wider text-text-secondary">
-            {project.stack.slice(0, 4).join(" · ")}
+            {project.stack.slice(0, 3).join(" · ")}
           </p>
         </div>
         <div className="flex gap-4">

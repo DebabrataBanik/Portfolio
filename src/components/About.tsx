@@ -10,9 +10,9 @@ const About = () => {
         I'm an Electronics and Telecommunications graduate from KIIT (2024),
         self-taught in web development over the past two years. I work mainly
         with React, TypeScript and Tailwind and I'm picking up Node, Express and
-        MongoDB for the backend. Right now I'm also going through Scaler program
-        for DSA fundamentals, system design and mentorship alongside building
-        projects.
+        MongoDB for the backend. Right now I'm also going through Scaler
+        program, which covers DSA fundamentals, system design and mentorship
+        alongside building projects.
       </p>
 
       <div>
@@ -22,7 +22,7 @@ const About = () => {
         <ul className="space-y-1">
           <li className="skill">
             <span className="skill-tag text-text-primary">Languges:</span>
-            JavaScript, TypeScript, JAVA, SQL
+            JavaScript, TypeScript, Java, SQL
           </li>
           <li className="skill">
             <span className="skill-tag text-text-primary">Frontend:</span>

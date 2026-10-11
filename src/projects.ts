@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     title: "Recipe Markdown",
     image: "/projects/recipe-markdown.png",
-    stack: ["React", "Hugging Face API", "react-markdown", "Vite"],
+    stack: ["React", "Hugging Face API", "Vite", "react-markdown"],
     live: "https://recipe-markdown.vercel.app/",
     github: "https://github.com/DebabrataBanik/Recipe-Markdown",
     details: [

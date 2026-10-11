@@ -6,7 +6,7 @@ import { useState } from "react";
 const Projects = () => {
   const [active, setActive] = useState<Project | null>(null);
   return (
-    <section id="projects" className="py-10 border-b border-b-border">
+    <section id="projects" className="py-10 pb-20 border-b border-b-border">
       <h2 className="font-heading text-3xl tracking-wide font-medium mb-8 relative inline-block">
         Projects
         <span className="absolute bottom-1.5 ml-1.5 w-7 h-0.5 bg-accent"></span>

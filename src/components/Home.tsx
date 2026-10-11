@@ -3,7 +3,7 @@ import { SiFrontendmentor } from "react-icons/si";
 
 const Home = () => {
   return (
-    <section id="home" className="py-10 pt-30 border-b border-b-border">
+    <section id="home" className="py-10 pb-20 pt-30 border-b border-b-border">
       <h1 className="font-heading text-4xl font-medium mb-8 relative">
         Hi, I'm Debabrata <span className="absolute z-10 bottom-1">👋</span>
         <span className="absolute bottom-1 opacity-85 left-0 w-83 h-1.5 bg-accent"></span>
